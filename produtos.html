@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Produtos</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* ===== ESTILO DAS ABAS ===== */
+.tabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs label {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffd1e8;
+  color: #a6005a;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.tabs label:hover {
+  background: #ffb6db;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #ffd1e8;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* quando a aba está ativa */
+#tab1:checked ~ #conteudo1,
+#tab2:checked ~ #conteudo2,
+#tab3:checked ~ #conteudo3,
+#tab4:checked ~ #conteudo4,
+#tab5:checked ~ #conteudo5,
+#tab6:checked ~ #conteudo6 {
+  display: block;
+}
+
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label,
+#tab4:checked + label,
+#tab5:checked + label,
+#tab6:checked + label {
+  background: #ff6fa8;
+  color: white;
+}
+
+/* tabela dentro das abas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th {
+  background: #ff6fa8;
+  color: white;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table img {
+  width: 110px;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+<h2>✨ Nossos Produtos</h2>
+
+<div class="tabs">
+
+  <!-- Abas -->
+  <input type="radio" id="tab1" name="tabs" checked>
+  <label for="tab1">🍰 Bolos</label>
+
+  <input type="radio" id="tab2" name="tabs">
+  <label for="tab2">🍫 Brigadeiros</label>
+
+  <input type="radio" id="tab3" name="tabs">
+  <label for="tab3">🧁 Cupcakes</label>
+
+  <input type="radio" id="tab4" name="tabs">
+  <label for="tab4">🥧 Tortas</label>
+
+  <input type="radio" id="tab5" name="tabs">
+  <label for="tab5">✨ Doces Finos</label>
+
+  <input type="radio" id="tab6" name="tabs">
+  <label for="tab6">🥐 Salgados</label>
+
+  <!-- Conteúdo das Abas -->
+  <div id="conteudo1" class="content">
+    <h3>🍰 Bolos Artesanais</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="bolo1.PNG"></td>
+        <td>Bolo de Chocolate</td>
+        <td>Recheado com ganache e cobertura especial.</td>
+        <td>R$ 65,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="bolo2.PNG"></td>
+        <td>Bolo de Morango</td>
+        <td>Fresco, leve e com morangos naturais.</td>
+        <td>R$ 59,90</td>
+      </tr>
+
+      <tr>
+        <td><img src="bolo3.PNG"></td>
+        <td>Red Velvet</td>
+        <td>Clássico americano com cream cheese.</td>
+        <td>R$ 89,90</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Brigadeiros -->
+  <div id="conteudo2" class="content">
+    <h3>🍫 Brigadeiros Gourmet</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="brigadeiro1.PNG"></td>
+        <td>Brigadeiro Belga</td>
+        <td>Chocolate belga e granulado belga premium.</td>
+        <td>R$ 4,50</td>
+      </tr>
+
+      <tr>
+        <td><img src="brigadeiro2.PNG"></td>
+        <td>Brigadeiro de Ninho</td>
+        <td>Cremoso com sabor de infância.</td>
+        <td>R$ 3,90</td>
+      </tr>
+
+      <tr>
+        <td><img src="brigadeiro3.PNG"></td>
+        <td>Brigadeiro 70%</td>
+        <td>Sabor intenso e sofisticado.</td>
+        <td>R$ 4,90</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Cupcakes -->
+  <div id="conteudo3" class="content">
+    <h3>🧁 Cupcakes</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="cupcake1.PNG"></td>
+        <td>Cupcake de Morango</td>
+        <td>Chantilly e morango fresco.</td>
+        <td>R$ 7,90</td>
+      </tr>
+
+      <tr>
+        <td><img src="cupcake2.PNG"></td>
+        <td>Cupcake de Chocolate</td>
+        <td>Recheado com ganache cremoso.</td>
+        <td>R$ 8,50</td>
+      </tr>
+
+      <tr>
+        <td><img src="cupcake3.PNG"></td>
+        <td>Cupcake Red Velvet</td>
+        <td>Com cobertura de cream cheese.</td>
+        <td>R$ 9,90</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Tortas -->
+  <div id="conteudo4" class="content">
+    <h3>🥧 Tortas</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="torta1.PNG"></td>
+        <td>Torta de Morango</td>
+        <td>Crocante, fresca e muito saborosa.</td>
+        <td>R$ 80,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="torta2.PNG"></td>
+        <td>Torta de Limão</td>
+        <td>Equilíbrio perfeito entre doce e ácido.</td>
+        <td>R$ 25,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="torta3.PNG"></td>
+        <td>Torta de Creme</td>
+        <td>Leve, suave e com toque caseiro.</td>
+        <td>R$ 45,00</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Doces Finos -->
+  <div id="conteudo5" class="content">
+    <h3>✨ Doces Finos</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="macarons.PNG"></td>
+        <td>Macarons</td>
+        <td>Delicados e coloridos.</td>
+        <td>R$ 4,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="trufa.PNG"></td>
+        <td>Trufa Artesanal</td>
+        <td>Recheio cremoso e chocolate nobre.</td>
+        <td>R$ 6,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="pave.PNG"></td>
+        <td>Pavê de Chocolate</td>
+        <td>Clássico da confeitaria brasileira.</td>
+        <td>R$ 28,00</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Salgados -->
+  <div id="conteudo6" class="content">
+    <h3>🥐 Salgados</h3>
+
+    <table>
+      <tr><th>Foto</th><th>Nome</th><th>Descrição</th><th>Preço</th></tr>
+
+      <tr>
+        <td><img src="empada.PNG"></td>
+        <td>Empada de Frango</td>
+        <td>Super recheada e massa delicada.</td>
+        <td>R$ 6,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="quiche.PNG"></td>
+        <td>Quiche Lorraine</td>
+        <td>Sabores refinados e textura cremosa.</td>
+        <td>R$ 14,00</td>
+      </tr>
+
+      <tr>
+        <td><img src="esfiha.PNG"></td>
+        <td>Esfiha Artesanal</td>
+        <td>Carne temperada e massa macia.</td>
+        <td>R$ 5,50</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

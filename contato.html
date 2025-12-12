@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Contato</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.social-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-buttons a {
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+}
+
+
+.btn-instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.btn-instagram:hover {
+  opacity: 0.85;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+<h2>📞 Entre em Contato</h2>
+
+<p>Preencha o formulário abaixo ou fale diretamente conosco pelas redes sociais!</p>
+
+<form>
+  <label>Nome Completo:</label><br>
+  <input type="text" required><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" required><br><br>
+
+  <label>Telefone:</label><br>
+  <input type="text" required><br><br>
+
+  <label>Assunto:</label><br>
+  <input type="text" required><br><br>
+
+  <label>Mensagem:</label><br>
+  <textarea rows="6" required></textarea><br><br>
+
+  <input type="submit" value="Enviar" class="btn">
+</form>
+
+<!-- Botões WhatsApp e Instagram -->
+<div class="social-buttons">
+  <a class="btn-whatsapp" href="https://wa.me/5511975702314" target="_blank">
+    💬 WhatsApp
+  </a>
+
+  <a class="btn-instagram" href="https://instagram.com/confeitaria_2o22" target="_blank">
+    📸 Instagram
+  </a>
+</div>
+
+</div>
+
+</body>
+</html>
